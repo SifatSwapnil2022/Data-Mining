@@ -1,0 +1,6 @@
+1.python --version
+2.pip install yt-dlp
+3.Download yt-dlp.exe from github
+4.pip install pandas matplotlib webvtt-py
+5. yt-dlp --write-auto-subs --sub-lang en --skip-download
+6. pip install youtube-comment-downloader 
