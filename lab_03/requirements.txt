@@ -1,0 +1,6 @@
+pandas
+matplotlib
+seaborn
+mlxtend
+networkx
+wordcloud

@@ -1,0 +1,131 @@
+support,itemsets,length
+0.03164556962025317,"frozenset({'nature', 'animal'})",2
+0.03164556962025317,"frozenset({'area', 'bbc'})",2
+0.03164556962025317,"frozenset({'area', 'beauty'})",2
+0.0379746835443038,"frozenset({'earth', 'area'})",2
+0.03164556962025317,"frozenset({'nature', 'area'})",2
+0.03164556962025317,"frozenset({'area', 'planet'})",2
+0.03164556962025317,"frozenset({'secret', 'area'})",2
+0.04430379746835443,"frozenset({'area', 'untouched'})",2
+0.0379746835443038,"frozenset({'bbc', 'beauty'})",2
+0.06962025316455696,"frozenset({'earth', 'bbc'})",2
+0.05063291139240506,"frozenset({'nature', 'bbc'})",2
+0.03164556962025317,"frozenset({'planet', 'bbc'})",2
+0.04430379746835443,"frozenset({'stunning', 'bbc'})",2
+0.0379746835443038,"frozenset({'untouched', 'bbc'})",2
+0.04430379746835443,"frozenset({'video', 'bbc'})",2
+0.03164556962025317,"frozenset({'nature', 'bear'})",2
+0.05063291139240506,"frozenset({'earth', 'beauty'})",2
+0.03164556962025317,"frozenset({'hidden', 'beauty'})",2
+0.0379746835443038,"frozenset({'journey', 'beauty'})",2
+0.06329113924050633,"frozenset({'nature', 'beauty'})",2
+0.04430379746835443,"frozenset({'planet', 'beauty'})",2
+0.03164556962025317,"frozenset({'secret', 'beauty'})",2
+0.03164556962025317,"frozenset({'stunning', 'beauty'})",2
+0.05063291139240506,"frozenset({'untouched', 'beauty'})",2
+0.03164556962025317,"frozenset({'corner', 'planet'})",2
+0.03164556962025317,"frozenset({'corner', 'untouched'})",2
+0.04430379746835443,"frozenset({'earth', 'hidden'})",2
+0.03164556962025317,"frozenset({'earth', 'incredible'})",2
+0.0379746835443038,"frozenset({'earth', 'journey'})",2
+0.06329113924050633,"frozenset({'nature', 'earth'})",2
+0.05063291139240506,"frozenset({'earth', 'planet'})",2
+0.03164556962025317,"frozenset({'earth', 'secret'})",2
+0.04430379746835443,"frozenset({'earth', 'stunning'})",2
+0.056962025316455694,"frozenset({'earth', 'untouched'})",2
+0.0379746835443038,"frozenset({'earth', 'video'})",2
+0.03164556962025317,"frozenset({'earth', 'wildlife'})",2
+0.05063291139240506,"frozenset({'nature', 'hidden'})",2
+0.03164556962025317,"frozenset({'hidden', 'planet'})",2
+0.03164556962025317,"frozenset({'secret', 'hidden'})",2
+0.03164556962025317,"frozenset({'hidden', 'stunning'})",2
+0.05063291139240506,"frozenset({'hidden', 'untouched'})",2
+0.0379746835443038,"frozenset({'nature', 'human'})",2
+0.0379746835443038,"frozenset({'human', 'untouched'})",2
+0.03164556962025317,"frozenset({'nature', 'journey'})",2
+0.03164556962025317,"frozenset({'planet', 'journey'})",2
+0.03164556962025317,"frozenset({'journey', 'stunning'})",2
+0.0379746835443038,"frozenset({'untouched', 'journey'})",2
+0.03164556962025317,"frozenset({'nature', 'love'})",2
+0.04430379746835443,"frozenset({'nature', 'mother'})",2
+0.04430379746835443,"frozenset({'nature', 'planet'})",2
+0.03164556962025317,"frozenset({'nature', 'raw'})",2
+0.0379746835443038,"frozenset({'nature', 'secret'})",2
+0.05063291139240506,"frozenset({'nature', 'stunning'})",2
+0.03164556962025317,"frozenset({'nature', 'truly'})",2
+0.06329113924050633,"frozenset({'nature', 'untouched'})",2
+0.03164556962025317,"frozenset({'nature', 'witness'})",2
+0.03164556962025317,"frozenset({'nature', 'wonder'})",2
+0.03164556962025317,"frozenset({'secret', 'planet'})",2
+0.05063291139240506,"frozenset({'planet', 'untouched'})",2
+0.03164556962025317,"frozenset({'planet', 'wonder'})",2
+0.04430379746835443,"frozenset({'secret', 'untouched'})",2
+0.04430379746835443,"frozenset({'untouched', 'stunning'})",2
+0.03164556962025317,"frozenset({'untouched', 'wonder'})",2
+0.03164556962025317,"frozenset({'earth', 'area', 'bbc'})",3
+0.03164556962025317,"frozenset({'area', 'untouched', 'bbc'})",3
+0.03164556962025317,"frozenset({'earth', 'area', 'beauty'})",3
+0.03164556962025317,"frozenset({'area', 'planet', 'beauty'})",3
+0.03164556962025317,"frozenset({'area', 'untouched', 'beauty'})",3
+0.03164556962025317,"frozenset({'nature', 'earth', 'area'})",3
+0.03164556962025317,"frozenset({'earth', 'planet', 'area'})",3
+0.03164556962025317,"frozenset({'earth', 'secret', 'area'})",3
+0.0379746835443038,"frozenset({'earth', 'untouched', 'area'})",3
+0.03164556962025317,"frozenset({'nature', 'secret', 'area'})",3
+0.03164556962025317,"frozenset({'nature', 'area', 'untouched'})",3
+0.03164556962025317,"frozenset({'area', 'planet', 'untouched'})",3
+0.03164556962025317,"frozenset({'secret', 'untouched', 'area'})",3
+0.0379746835443038,"frozenset({'earth', 'bbc', 'beauty'})",3
+0.03164556962025317,"frozenset({'planet', 'bbc', 'beauty'})",3
+0.03164556962025317,"frozenset({'untouched', 'bbc', 'beauty'})",3
+0.04430379746835443,"frozenset({'nature', 'earth', 'bbc'})",3
+0.03164556962025317,"frozenset({'earth', 'planet', 'bbc'})",3
+0.0379746835443038,"frozenset({'earth', 'stunning', 'bbc'})",3
+0.0379746835443038,"frozenset({'earth', 'untouched', 'bbc'})",3
+0.0379746835443038,"frozenset({'earth', 'video', 'bbc'})",3
+0.03164556962025317,"frozenset({'nature', 'stunning', 'bbc'})",3
+0.03164556962025317,"frozenset({'nature', 'untouched', 'bbc'})",3
+0.03164556962025317,"frozenset({'planet', 'untouched', 'bbc'})",3
+0.03164556962025317,"frozenset({'untouched', 'stunning', 'bbc'})",3
+0.0379746835443038,"frozenset({'earth', 'journey', 'beauty'})",3
+0.0379746835443038,"frozenset({'nature', 'earth', 'beauty'})",3
+0.0379746835443038,"frozenset({'earth', 'planet', 'beauty'})",3
+0.03164556962025317,"frozenset({'earth', 'stunning', 'beauty'})",3
+0.04430379746835443,"frozenset({'earth', 'untouched', 'beauty'})",3
+0.03164556962025317,"frozenset({'hidden', 'untouched', 'beauty'})",3
+0.03164556962025317,"frozenset({'nature', 'journey', 'beauty'})",3
+0.03164556962025317,"frozenset({'planet', 'journey', 'beauty'})",3
+0.03164556962025317,"frozenset({'journey', 'stunning', 'beauty'})",3
+0.0379746835443038,"frozenset({'untouched', 'journey', 'beauty'})",3
+0.03164556962025317,"frozenset({'nature', 'planet', 'beauty'})",3
+0.0379746835443038,"frozenset({'nature', 'untouched', 'beauty'})",3
+0.03164556962025317,"frozenset({'secret', 'planet', 'beauty'})",3
+0.04430379746835443,"frozenset({'planet', 'untouched', 'beauty'})",3
+0.03164556962025317,"frozenset({'secret', 'untouched', 'beauty'})",3
+0.03164556962025317,"frozenset({'untouched', 'stunning', 'beauty'})",3
+0.03164556962025317,"frozenset({'corner', 'planet', 'untouched'})",3
+0.04430379746835443,"frozenset({'nature', 'earth', 'hidden'})",3
+0.0379746835443038,"frozenset({'earth', 'hidden', 'untouched'})",3
+0.03164556962025317,"frozenset({'nature', 'earth', 'journey'})",3
+0.03164556962025317,"frozenset({'earth', 'planet', 'journey'})",3
+0.03164556962025317,"frozenset({'earth', 'journey', 'stunning'})",3
+0.0379746835443038,"frozenset({'earth', 'untouched', 'journey'})",3
+0.0379746835443038,"frozenset({'nature', 'earth', 'planet'})",3
+0.03164556962025317,"frozenset({'nature', 'earth', 'secret'})",3
+0.03164556962025317,"frozenset({'nature', 'earth', 'stunning'})",3
+0.05063291139240506,"frozenset({'nature', 'earth', 'untouched'})",3
+0.04430379746835443,"frozenset({'earth', 'planet', 'untouched'})",3
+0.03164556962025317,"frozenset({'earth', 'untouched', 'secret'})",3
+0.0379746835443038,"frozenset({'earth', 'untouched', 'stunning'})",3
+0.03164556962025317,"frozenset({'nature', 'hidden', 'stunning'})",3
+0.04430379746835443,"frozenset({'nature', 'hidden', 'untouched'})",3
+0.03164556962025317,"frozenset({'hidden', 'untouched', 'planet'})",3
+0.03164556962025317,"frozenset({'secret', 'hidden', 'untouched'})",3
+0.03164556962025317,"frozenset({'hidden', 'untouched', 'stunning'})",3
+0.03164556962025317,"frozenset({'nature', 'untouched', 'journey'})",3
+0.03164556962025317,"frozenset({'untouched', 'journey', 'planet'})",3
+0.03164556962025317,"frozenset({'untouched', 'journey', 'stunning'})",3
+0.0379746835443038,"frozenset({'nature', 'planet', 'untouched'})",3
+0.0379746835443038,"frozenset({'nature', 'secret', 'untouched'})",3
+0.0379746835443038,"frozenset({'nature', 'untouched', 'stunning'})",3
+0.03164556962025317,"frozenset({'secret', 'planet', 'untouched'})",3

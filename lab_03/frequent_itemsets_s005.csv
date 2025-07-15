@@ -1,0 +1,15 @@
+support,itemsets,length
+0.06962025316455696,"frozenset({'earth', 'bbc'})",2
+0.05063291139240506,"frozenset({'nature', 'bbc'})",2
+0.05063291139240506,"frozenset({'earth', 'beauty'})",2
+0.06329113924050633,"frozenset({'nature', 'beauty'})",2
+0.05063291139240506,"frozenset({'untouched', 'beauty'})",2
+0.06329113924050633,"frozenset({'nature', 'earth'})",2
+0.05063291139240506,"frozenset({'earth', 'planet'})",2
+0.056962025316455694,"frozenset({'earth', 'untouched'})",2
+0.05063291139240506,"frozenset({'nature', 'hidden'})",2
+0.05063291139240506,"frozenset({'hidden', 'untouched'})",2
+0.05063291139240506,"frozenset({'nature', 'stunning'})",2
+0.06329113924050633,"frozenset({'nature', 'untouched'})",2
+0.05063291139240506,"frozenset({'planet', 'untouched'})",2
+0.05063291139240506,"frozenset({'nature', 'earth', 'untouched'})",3
