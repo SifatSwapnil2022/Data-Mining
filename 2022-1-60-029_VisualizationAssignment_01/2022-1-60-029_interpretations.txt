@@ -1,0 +1,10 @@
+2022-1-60-029_box_uniform.png: The values are evenly spread out with no extreme points, which makes sense since the data was generated from a uniform range. The box is nicely centered, showing a balanced distribution.
+
+2022-1-60-029_box_skewed.png: Most of the data is packed toward the lower end, but there are a few large values pulling the plot to the right. This gives a classic right-skewed shape caused by outliers.
+
+2022-1-60-029_hist_normal.png: This histogram looks like a textbook bell curve — most values are around the middle, with fewer as you move outwards. It clearly follows a normal distribution.
+
+2022-1-60-029_box_small.png: There’s barely any box here because the dataset only has two values that are very close together. It’s a great example of how small datasets don't offer much variation.
+
+2022-1-60-029_hist_large.png: The histogram is thick and spread out, showing thousands of values across a wide range. It looks almost flat in places due to how much data there is — very dense but well distributed.
+

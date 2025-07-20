@@ -1,0 +1,35 @@
+--- Uniform Dataset Summary ---
+Min    : 59.86
+Q1     : 259.88
+Median : 420.24
+Q3     : 618.62
+Max    : 735.42
+
+--- Skewed Dataset Summary ---
+Min    : 1.20
+Q1     : 1.88
+Median : 2.65
+Q3     : 3.35
+Max    : 90.00
+
+--- Normal Dataset Summary ---
+Min    : 710.37
+Q1     : 768.87
+Median : 811.91
+Q3     : 854.45
+Max    : 925.35
+
+--- Small Dataset Summary ---
+Min    : 9999.00
+Q1     : 9999.25
+Median : 9999.50
+Q3     : 9999.75
+Max    : 10000.00
+
+--- Large Dataset Summary ---
+Min    : 250.00
+Q1     : 2699.00
+Median : 5144.00
+Q3     : 7584.25
+Max    : 10000.00
+
