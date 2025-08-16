@@ -1,0 +1,5 @@
+Captions emphasize structured narrative keywords, while comments focus on personal reactions.
+Certain topics appear exclusively in comments, reflecting audience-driven discussions.
+Sentiment in comments skews more [positive/negative], while captions remain mostly neutral.
+Bigrams in captions reflect planned phrases, whereas comment bigrams are more spontaneous.
+Overlap in top keywords suggests strong resonance between the video's script and audience interests.

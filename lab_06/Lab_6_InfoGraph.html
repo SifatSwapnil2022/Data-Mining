@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE477: Lab 6 Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #2c3e50; /* A dark slate color */
+            background-color: #f4f7f9; /* Light grey-blue */
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 210mm; /* A4 width */
+            min-height: 297mm; /* A4 height */
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* Print styles for A4 pages */
+        @media print {
+            body {
+                background: none;
+            }
+            .container {
+                margin: 0;
+                box-shadow: none;
+                min-height: auto;
+                page-break-after: always;
+            }
+            .container:last-child {
+                page-break-after: avoid;
+            }
+            header, footer {
+                position: fixed;
+            }
+        }
+
+        /* Custom styling for the infographic */
+        .header-content, .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+        .header {
+            background-color: #3498db; /* Blue */
+            color: white;
+            border-bottom: 5px solid #2980b9;
+        }
+        .footer {
+            background-color: #ecf0f1;
+            color: #7f8c8d;
+            border-top: 1px solid #bdc3c7;
+            font-size: 0.8rem;
+        }
+        .page-content {
+            padding: 2rem;
+        }
+        .section-heading {
+            border-left: 5px solid #e74c3c; /* Red */
+            padding-left: 1rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            font-size: 1.5rem;
+            color: #e74c3c;
+        }
+        .sub-heading {
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: #34495e; /* Darker blue-grey */
+        }
+        .task-card {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-bottom: 1rem;
+        }
+        .task-card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .task-icon {
+            color: #ffffff;
+            background: #2ecc71; /* Green */
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-right: 1rem;
+        }
+        .venn-diagram {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 250px;
+        }
+        .venn-circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            position: absolute;
+            opacity: 0.6;
+        }
+        .venn-comments { background-color: #3498db; left: 50px; }
+        .venn-captions { background-color: #9b59b6; right: 50px; }
+        .venn-label {
+            position: absolute;
+            font-weight: 600;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        .venn-label-comments { left: 100px; top: 80px; }
+        .venn-label-captions { right: 100px; top: 80px; }
+        .venn-label-intersection {
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="bg-[#f4f7f9]">
+
+<div class="container my-8">
+    <header class="header">
+        <div class="header-content">
+            <h1 class="text-2xl font-bold">CSE477: Lab 6 Infographic</h1>
+            <h2 class="text-xl font-semibold">Data Mining Lab</h2>
+        </div>
+    </header>
+    <div class="page-content">
+        <section>
+            <h3 class="text-3xl font-bold text-center mt-4 mb-2 text-[#e74c3c]">Text Mining with YouTube Data</h3>
+            <p class="text-center text-lg text-gray-600 mb-6">
+                An overview of the lab objectives, tasks, and connection to the final project.
+            </p>
+            <div class="flex items-center justify-center space-x-8 text-gray-700">
+                <div class="text-center">
+                    <i class="fas fa-clock text-4xl text-[#3498db] mb-2"></i>
+                    <p class="font-semibold">Estimated Duration</p>
+                    <p>2 hours</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-bullseye text-4xl text-[#2ecc71] mb-2"></i>
+                    <p class="font-semibold">Objective</p>
+                    <p>Extract and compare themes, patterns, and sentiments from captions and comments.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="section-heading"><i class="fas fa-history mr-3"></i>Background & Previous Skills</h3>
+            <p class="mb-4">This lab builds upon techniques and skills developed in earlier labs.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="p-4 bg-gray-100 rounded-lg shadow-sm">
+                    <h4 class="sub-heading mb-2">Past Labs (1–5)</h4>
+                    <ul class="list-disc pl-5 text-gray-700">
+                        <li>Collected and explored raw YouTube data (Lab 1).</li>
+                        <li>Cleaned and preprocessed text for analysis (Lab 2).</li>
+                        <li>Mined frequent patterns and co-occurrences (Lab 3).</li>
+                        <li>Performed temporal/incremental analysis (Lab 4).</li>
+                        <li>Clustered text data based on similarity (Lab 5).</li>
+                    </ul>
+                </div>
+                <div class="p-4 bg-gray-100 rounded-lg shadow-sm">
+                    <h4 class="sub-heading mb-2">This Lab (6)</h4>
+                    <ul class="list-disc pl-5 text-gray-700">
+                        <li>Apply TF–IDF keyword extraction to both captions and comments.</li>
+                        <li>Compare linguistic patterns between what’s said in the video and what’s discussed in the comments.</li>
+                        <li>Extend analysis to n-grams, sentiment, and cross-video comparison.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h3 class="section-heading"><i class="fas fa-database mr-3"></i>Dataset Requirements</h3>
+            <div class="flex items-start space-x-4 p-4 bg-yellow-100 rounded-lg shadow-sm">
+                <i class="fas fa-exclamation-triangle text-2xl text-yellow-500 mt-1"></i>
+                <div class="flex-1">
+                    <p class="font-semibold mb-2">Requirement:</p>
+                    <p>Each student or group must use a different video or channel so results are unique.</p>
+                </div>
+            </div>
+            <div class="mt-4">
+                <h4 class="sub-heading mb-2">Choose one of the following datasets:</h4>
+                <ul class="list-disc pl-5 text-gray-700">
+                    <li>Your own cleaned dataset from previous labs (recommended).</li>
+                    <li>A provided processed dataset ( <code class="font-mono bg-gray-200 rounded px-1">cleaned_comments.csv</code> , <code class="font-mono bg-gray-200 rounded px-1">cleaned_captions.csv</code> ).</li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+    <footer class="footer mt-4">
+        <div class="footer-content">
+            <p>CSE477 — Data Mining Lab</p>
+            <p>Page 1 of 3</p>
+        </div>
+    </footer>
+</div>
+
+<div class="container my-8">
+    <header class="header">
+        <div class="header-content">
+            <h1 class="text-2xl font-bold">CSE477: Lab 6 Infographic</h1>
+            <h2 class="text-xl font-semibold">Step-by-Step Lab Tasks</h2>
+        </div>
+    </header>
+    <div class="page-content">
+
+        <h3 class="section-heading"><i class="fas fa-tasks mr-3"></i>Detailed Tasks</h3>
+        <p class="text-gray-700 mb-6">A breakdown of the required steps to complete the lab.</p>
+
+        <div class="task-card">
+            <div class="task-card-header">
+                <div class="task-icon"><i class="fas fa-cogs"></i></div>
+                <h4 class="text-lg font-semibold">Part A: Setup & Recall</h4>
+            </div>
+            <ul class="list-disc pl-5 text-gray-700">
+                <li>Load cleaned comments and captions CSVs into pandas DataFrames.</li>
+                <li>Ensure there is a <code class="font-mono bg-gray-200 rounded px-1">cleaned_tokens</code> column.</li>
+                <li>Join tokens back into strings for text analysis.</li>
+                <li>Install scikit-learn and matplotlib-venn if not already available.</li>
+            </ul>
+        </div>
+        
+        <div class="task-card">
+            <div class="task-card-header">
+                <div class="task-icon"><i class="fas fa-search"></i></div>
+                <h4 class="text-lg font-semibold">Part B: TF–IDF Keyword Extraction</h4>
+            </div>
+            <p class="text-gray-700 mb-2">Identify the most important keywords for both comments and captions.</p>
+            <ul class="list-disc pl-5 text-gray-700">
+                <li>Vectorize comments with <code class="font-mono bg-gray-200 rounded px-1">TfidfVectorizer</code>.</li>
+                <li>Extract top 15 keywords for comments and save to CSV.</li>
+                <li>Repeat for captions.</li>
+            </ul>
+        </div>
+
+        <div class="task-card">
+            <div class="task-card-header">
+                <div class="task-icon"><i class="fas fa-chart-area"></i></div>
+                <h4 class="text-lg font-semibold">Part C: Keyword & Theme Comparison</h4>
+            </div>
+            <p class="text-gray-700 mb-2">Visually compare the keywords found in comments and captions.</p>
+            <div class="venn-diagram my-4">
+                <div class="venn-circle venn-comments"></div>
+                <div class="venn-circle venn-captions"></div>
+                <p class="venn-label venn-label-comments">Comments <br/> Unique Keywords</p>
+                <p class="venn-label venn-label-captions">Captions <br/> Unique Keywords</p>
+                <p class="venn-label venn-label-intersection">Intersection <br/> (Common Keywords)</p>
+            </div>
+            <p class="text-center text-gray-600 italic">Visualize the overlap and uniqueness of keywords using a Venn diagram.</p>
+        </div>
+        
+        <div class="task-card">
+            <div class="task-card-header">
+                <div class="task-icon"><i class="fas fa-align-left"></i></div>
+                <h4 class="text-lg font-semibold">Part D: N-gram Analysis</h4>
+            </div>
+            <p class="text-gray-700 mb-2">Analyze frequently co-occurring word pairs (bigrams).</p>
+            <ul class="list-disc pl-5 text-gray-700">
+                <li>Run TF–IDF for bigrams.</li>
+                <li>Extract top 10 bigrams for both comments and captions.</li>
+                <li>Compare overlap and uniqueness.</li>
+            </ul>
+        </div>
+        
+        <div class="task-card">
+            <div class="task-card-header">
+                <div class="task-icon"><i class="fas fa-grin-beam"></i></div>
+                <h4 class="text-lg font-semibold">Part E: Sentiment Analysis</h4>
+            </div>
+            <p class="text-gray-700 mb-2">Measure the emotional tone of the comments and captions.</p>
+            <div class="bg-gray-100 p-4 rounded-lg my-4">
+                <canvas id="sentimentChart"></canvas>
+            </div>
+            <p class="text-center text-gray-600 italic">Visualize the sentiment distribution (positive/neutral/negative) with a bar chart.</p>
+        </div>
+
+    </div>
+    <footer class="footer mt-4">
+        <div class="footer-content">
+            <p>CSE477 — Data Mining Lab</p>
+            <p>Page 2 of 3</p>
+        </div>
+    </footer>
+</div>
+
+<div class="container my-8">
+    <header class="header">
+        <div class="header-content">
+            <h1 class="text-2xl font-bold">CSE477: Lab 6 Infographic</h1>
+            <h2 class="text-xl font-semibold">Insights & Deliverables</h2>
+        </div>
+    </header>
+    <div class="page-content">
+
+        <h3 class="section-heading"><i class="fas fa-link mr-3"></i>Part F: Linking to Past Labs</h3>
+        <p class="text-gray-700 mb-4">Integrate previous lab techniques for a more comprehensive analysis.</p>
+        <ul class="list-disc pl-5 text-gray-700">
+            <li>Use Lab 3 techniques to find co-occurring keyword pairs from the top TF–IDF terms.</li>
+            <li>Use Lab 4’s temporal split (if your data spans time) to see how keyword prominence changes.</li>
+            <li>(Optional) Cluster TF–IDF vectors as in Lab 5 to group discussions thematically.</li>
+        </ul>
+
+        <h3 class="section-heading"><i class="fas fa-lightbulb mr-3"></i>Part G: Insight Statements</h3>
+        <p class="text-gray-700 mb-4">Summarize your findings in 3–5 key statements.</p>
+        <ul class="list-disc pl-5 text-gray-700">
+            <li>Which themes dominate in captions but not in comments?</li>
+            <li>Are certain topics only raised by the audience?</li>
+            <li>How does sentiment differ between captions and comments?</li>
+        </ul>
+        <p class="text-gray-700 mt-2">Save as <code class="font-mono bg-gray-200 rounded px-1">Lab6_Insights.txt</code>.</p>
+        
+        <h3 class="section-heading"><i class="fas fa-folder-open mr-3"></i>Deliverables</h3>
+        <p class="text-gray-700 mb-4">A list of all required outputs to be submitted.</p>
+        <div class="bg-gray-100 p-4 rounded-lg shadow-sm">
+            <h4 class="sub-heading mb-2">Required Files:</h4>
+            <ul class="list-disc pl-5 text-gray-700">
+                <li>CSVs: TF–IDF results, bigrams, sentiment.</li>
+                <li>Visuals: Venn diagram, keyword charts, sentiment bar charts.</li>
+                <li>Insights file.</li>
+            </ul>
+        </div>
+        <p class="text-gray-700 mt-4">All outputs stored in: <code class="font-mono bg-gray-200 rounded px-1">Lab6_TextMining_YourName/</code>.</p>
+
+        <h3 class="section-heading"><i class="fas fa-project-diagram mr-3"></i>Connection to Final Project</h3>
+        <p class="text-gray-700 mb-4">The outputs from this lab will be reused directly in your Final Lab Project when:</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center mt-4">
+            <div class="bg-blue-100 p-4 rounded-lg shadow-sm">
+                <i class="fas fa-chart-line text-2xl text-blue-500 mb-2"></i>
+                <p>Scaling up from 1 video to 3+ videos.</p>
+            </div>
+            <div class="bg-purple-100 p-4 rounded-lg shadow-sm">
+                <i class="fas fa-exchange-alt text-2xl text-purple-500 mb-2"></i>
+                <p>Comparing trends across multiple videos/channels.</p>
+            </div>
+            <div class="bg-green-100 p-4 rounded-lg shadow-sm">
+                <i class="fas fa-layer-group text-2xl text-green-500 mb-2"></i>
+                <p>Building a multi-video thematic and engagement comparison dataset.</p>
+            </div>
+        </div>
+    </div>
+    <footer class="footer mt-4">
+        <div class="footer-content">
+            <p>CSE477 — Data Mining Lab</p>
+            <p>Page 3 of 3</p>
+        </div>
+    </footer>
+</div>
+
+<script>
+    // Sample data for the sentiment chart, to be replaced by actual lab data
+    const sentimentData = {
+        labels: ['Positive', 'Neutral', 'Negative'],
+        datasets: [{
+            label: 'Comments Sentiment Distribution',
+            data: [55, 30, 15],
+            backgroundColor: [
+                '#2ecc71', /* Green */
+                '#f1c40f', /* Yellow */
+                '#e74c3c'  /* Red */
+            ],
+            borderColor: [
+                '#27ae60',
+                '#f39c12',
+                '#c0392b'
+            ],
+            borderWidth: 1
+        }]
+    };
+
+    const config = {
+        type: 'bar',
+        data: sentimentData,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: false,
+                },
+                title: {
+                    display: true,
+                    text: 'Comments Sentiment Analysis (Example)',
+                    font: {
+                        size: 16
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Percentage'
+                    }
+                }
+            }
+        },
+    };
+
+    const sentimentChart = new Chart(
+        document.getElementById('sentimentChart'),
+        config
+    );
+</script>
+</body>
+</html>
